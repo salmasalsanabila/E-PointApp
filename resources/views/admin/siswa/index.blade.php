@@ -43,11 +43,14 @@
         </tr>
         @forelse($siswas as $siswa)
         <tr>
+            <td>
+                <img src="{{ asset('storage/public/siswas/' . $siswa->image) }}" width="120px" height="120px">
+            </td>
             <td>{{ $siswa->nis }}</td>
             <td>{{ $siswa->name }}</td>
-            <td>{{ siswa->email }}</td>
-            <td>{{ siswa->tingkatan }} {{ siswa->jurusan }} {{ $siswa->kelas}}</td>
-            @if ($siswa->status==1):
+            <td>{{ $siswa->email }}</td>
+            <td>{{ $siswa->tingkatan }} {{ $siswa->jurusan }} {{ $siswa->kelas}}</td>
+            @if ($siswa->status==1)
             <td>Aktif</td>
             @else
             <td>Tidak Aktif</td>
